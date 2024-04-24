@@ -10,9 +10,9 @@ void setup()
   nave = new Nave();
   nave.setPosicion(new PVector(width/2, height/2));
   nave.setVelocidad(new PVector(10, 10));
-  //asteroide = new Asteroide(new PVector(width/2,0), new PVector(0,5));
-  asteroide = new Asteroide(new PVector(random(width), 0), new PVector(random(-2, 2), random(3, 6)));
-  cat = new Cat(new PVector(0,height/2), new PVector(2,0));
+ 
+  asteroide =  new Asteroide(new PVector(random(width), random(-height,0)), new PVector(0,random(1,5)));
+  cat = new Cat(new PVector(0,height/10), new PVector(2,0));
 }
 
 void draw()

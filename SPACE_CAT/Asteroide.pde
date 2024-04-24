@@ -29,7 +29,9 @@ class Asteroide
     if (this.posicion.y<height) {
       this.posicion.y += this.velocidad.y;
     } else {
-      this.posicion.y=0;
+      posicion.y = 0;
+      posicion.x = random(width);
+      velocidad.y = random(1,5);
     }
   }
 }

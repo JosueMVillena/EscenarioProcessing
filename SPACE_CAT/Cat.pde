@@ -20,18 +20,24 @@ class Cat
   public void dibujar()
   {
 
-    image(imagen, posicion.x, random(0,0), 80, 80);
+    image(imagen, posicion.x, posicion.y , 100, 100);
     
   }
 
   public void mover()
   {
-    if (this.posicion.x<width) {
-      this.posicion.x += this.velocidad.x;
-    } else {
-      this.posicion.x = this.posicion.x*-1;
-      
+     this.posicion.x += this.velocidad.x;
+    this.posicion.y += this.velocidad.y;
+
+    if (this.posicion.x<=0 || this.posicion.x>=width-100) {
+      this.velocidad.x = -this.velocidad.x;
     }
+    if (this.posicion.x < 0) {
+      this.posicion.x = 0;
+    } else if (this.posicion.x > width - 100) {
+      this.posicion.x = width - 100;
+    }
+   
     
   }
 }
